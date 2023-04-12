@@ -19,13 +19,21 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#speciesSelect {
+    font-size: 20px;
 }
 
 #createPet {
     margin: 20px;
     text-align: center;
+    font-size: 25px
 }
 
-#confirmBtn {
-    font-size: 25px;
+.petActions {
+    margin: 20px;
+    text-align: center;
+    font-size: 25px
 }
