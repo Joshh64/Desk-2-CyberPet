@@ -8,6 +8,11 @@ body {
     padding: 20px;
 }
 
+#welcomeMessage {
+    width: 750px;
+    text-align: center;
+}
+
 #openingPageInput {
     font-size: 20px;
     display: flex;
@@ -21,7 +26,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 #speciesSelect {
@@ -40,6 +44,10 @@ body {
     align-items: flex-end;
     font-size: 30px;
     margin-top: bottom;
+}
+
+#petPage.hide {
+    
 }
 
 #pet {
