@@ -1,5 +1,35 @@
 
 /*
+------------------JSDOM Links to HTML------------
+*/
+
+const petNameInput = document.getElementById("nameInput");
+const petChoice=document.getElementById('choosePet')
+
+
+
+
+
+/*
+------------------Pet name Function------------
+*/
+
+let pet = "";
+let petName = '';
+
+
+const inputName = () => {
+    petName= register("Give your pet a name!")
+    while(petName.length === 0){
+        remind("Did you forget to name your pet?");
+        petName = register("Pet name");
+    }
+};
+
+
+
+
+/*
 -----------Animal class keyword code-----------
 */
 
@@ -53,6 +83,21 @@ const Bird = new Animal ('Bobby', 70)
 Cat.talks();
 Dog.talks();
 Bird.talks();
+
+
+
+/*
+------------------Health decline Function------------
+*/
+
+
+const healthDecline = () => {
+    const dropOff = setInterval(loseHealth, 05000);
+    function loseHealth() {
+        healthBar.value--;
+    }
+};
+
 
 
 

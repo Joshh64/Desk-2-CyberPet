@@ -46,10 +46,6 @@ body {
     margin-top: bottom;
 }
 
-#petPage.hide {
-    
-}
-
 #pet {
     display: flex;
     justify-content: center;
