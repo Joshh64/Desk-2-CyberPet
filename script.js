@@ -40,7 +40,6 @@ pet(){
 
 
 
-
 const Cat = new Animal ('Catty', 100 )
 
 
