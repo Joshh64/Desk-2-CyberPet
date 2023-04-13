@@ -1,3 +1,7 @@
+body {
+    background-color: beige;
+}
+
 #pageTitle {
     text-align: center;
     font-size: 60px;
@@ -5,7 +9,6 @@
 }
 
 #openingPageInput {
-    background-color: red;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -14,7 +17,6 @@
 }
 
 #petNameInput {
-    background-color: red;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -29,11 +31,40 @@
 #createPet {
     margin: 20px;
     text-align: center;
-    font-size: 25px
+    display: flex;
+    justify-content: center;
 }
 
-.petActions {
+#confirmBtn {
+    display: flex;
+    align-items: flex-end;
+    font-size: 30px;
+    margin-top: bottom;
+}
+
+#pet {
+    display: flex;
+    justify-content: center;
+}
+
+#petAnimation {
+    display: flex;
+    justify-content: center;
+}
+
+#petActions {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 20px;
+}
+
+.petButton {
+    font-size: 30px;
+    margin: 20px;
+}
+
+#deathMessage {
     text-align: center;
-    font-size: 25px
+    font-size: 20px;
 }
