@@ -20,10 +20,10 @@
            <h1 id= "welcomeMessage">Hello! Please choose a species and a name for your pet</h1>
        </div>
 
-       <div id="petNameInput" class = "pageBox">
+       <div id="petNameInput">
            <p>My pet will be called...<p>
            <input type="text"></button>
-       
+
 
     <div id="createPet">
         <button id="dogBtn" >Dog</button>
@@ -53,7 +53,17 @@
     </div>
 
    
+
+    <!-- Part that displays when pet dies -->
+
+    <div style="display: none">
+        <p id="deathMessage">Oh no! Your pet has unfortunately passed away. It lived for (time), and the longest one of your pets has lived is (besttime)</p>
+        <div id="failText">
+            <button id="reset">Reset</button>
+        </div>
+    </div>
     
+    </div>
 <script src="./script.js"></script>
 </body>
 </html>

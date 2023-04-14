@@ -43,29 +43,48 @@ body {
     margin-top: bottom;
 }
 
-#pet {
+#petPage {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
-#petAnimation {
-    display: flex;
-    justify-content: center;
+#page2Title {
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
 }
 
-#petActions {
-    display:flex;
-    flex-direction: row;
+#petAnimations {
+    display: flex;
     justify-content: center;
+    margin: auto;
+    padding: 30px;
+}
+
+.petActions {
     margin: 20px;
-}
-
-.petButton {
     font-size: 30px;
-    margin: 20px;
+    margin-top: bottom;
+}
+
+#failText {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #deathMessage {
-    text-align: center;
-    font-size: 20px;
+    width: 750px;
+    font-size: 30px;
+    margin: auto;
+    padding: 30px;
+}
+
+#reset {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
