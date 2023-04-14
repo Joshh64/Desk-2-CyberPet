@@ -14,6 +14,9 @@ const petButtons = document.getElementById("petButtons")
 const eat =document.getElementById("eat") 
 const drink =document.getElementById("drink") 
 const petFn =document.getElementById("petBtn") 
+const catImg = document.getElementById("cat");
+const dogImg = document.getElementById("dog");
+const birdImg = document.getElementById("bird");
 
 let pet = ""; 
 let petName = ""; 
@@ -26,9 +29,11 @@ petScreen.style.display = "none";
 
 const inputName = () => { 
     petName = document.getElementById("inputName").value 
-    while(petName.length === 0){ 
-        remind("Did you forget to name your pet?"); 
-        petName = register("Pet name"); 
+    if(petName.length === 0){ 
+      
+    //   Causing Errors ------
+        // remind("Did you forget to name your pet?"); 
+        // petName = register("Pet name"); 
     } 
 }; 
 
@@ -92,7 +97,9 @@ dogBtn.addEventListener("click",() =>{
     welcomePage.style.display = "none"; 
     petScreen.style.display = "block"; 
     inputName(); 
-    //SPRITE CODE HERE 
+        //SPRITE CODE HERE
+        catImg.style.display ="none";
+        birdImg.style.display ="none";
     healthDecline(); 
 }); 
 
@@ -100,7 +107,9 @@ catBtn.addEventListener("click",() =>{
     welcomePage.style.display = "none"; 
     petScreen.style.display = "block"; 
     inputName(); 
-    //SPRITE CODE HERE 
+        //SPRITE CODE HERE
+        birdImg.style.display ="none";
+        dogImg.style.display ="none";
     healthDecline(); 
 }); 
 
@@ -108,7 +117,9 @@ birdBtn.addEventListener("click",() =>{
     welcomePage.style.display = "none"; 
     petScreen.style.display = "block"; 
     inputName(); 
-    //SPRITE CODE HERE 
+        //SPRITE CODE HERE
+        catImg.style.display ="none";
+        dogImg.style.display ="none";
     healthDecline(); 
 }); 
 
