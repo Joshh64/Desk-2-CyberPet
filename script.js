@@ -117,74 +117,36 @@ birdBtn.addEventListener("click",() =>{
  
 
 // class Cat extends Animal{ 
-
 //     constructor(){ 
-
 //     super(name) 
-
-   
-
 //     eat(); 
-
 //     drink(); 
-
 // }; 
-
 // }; 
-
- 
-
- 
-
-        
 
 // class Dog extends Animal{ 
-
 //     constructor(){ 
-
 //     super(name) 
-
 //     }; 
-
 //     walk() { 
-
 //         if (healthBar === 0){ 
-
 //             return "Game Over"; 
-
 //         }else{ 
-
 //         healthBar.value += 20; 
-
 //     } 
-
 // }; 
 
- 
 
 // class Bird extends Animal{ 
-
 //     constructor(){ 
-
 //     super(name)  
-
 //     }; 
-
 //     fly(){ 
-
 //         if (healthBar === 0) { 
-
 //             return "Game Over"; 
-
 //         }else{ healthBar.value =+ 20; 
-
 //     } 
-
 //     }; 
-
- 
-
- 
 
 const myPet = new Animal(petName, healthBar); 
 
