@@ -16,22 +16,19 @@
            <h1 id="pageTitle">Desk 2's CyberPet</h1>
        </div>
 
-       <div id="openingPageInput" class = "pageBox">
+       <div id="openingPageInput">
            <h1 id= "welcomeMessage">Hello! Please choose a species and a name for your pet</h1>
        </div>
 
-
-
-       <div id="petNameInput" class = "pageBox">
-           <p>My pet will be called...<p>
-           <input id="inputName" type="text">
-           </div>
-
+       <div id="petNameInput">
+           <label>My pet will be called...</label>
+           <input id="inputName" type="text" placeholder="Type pet name here">
+       </div>
 
     <div id="createPet">
-        <button id="dogBtn" >Dog</button>
-        <button id="catBtn">Cat</button>
-        <button id=birdBtn>Bird</button>
+        <button id="dogBtn" onclick="inputName()">Dog</button>
+        <button id="catBtn" onclick="inputName()">Cat</button>
+        <button id="birdBtn" onclick="inputName()">Bird</button>
     </div>
 </div>
 
@@ -45,7 +42,7 @@
         <div id="petInfo">
             <p id="petName"> PET NAME HERE</p>
             <label for="healthBar"> Health:</label>
-            <meter id=healthBar min="0" max="100"></meter>
+            <meter id=healthBar value="100" min="0" max="100"></meter>
         </div>
     </div>
     <div class=petButtons>
