@@ -1,181 +1,222 @@
+/* 
+------------------JSDOM Links to HTML------------ 
+*/ 
 
-/*
-------------------JSDOM Links to HTML------------
-*/
+const petNameInput = document.getElementById("nameInput"); 
+const createPet = document.getElementById('choosePet') 
+const dogBtn = document.getElementById('dogBtn') 
+const catBtn = document.getElementById('catBtn') 
+const birdBtn = document.getElementById('birdBtn') 
+const welcomePage= document.getElementById("welcomePage") 
+const petScreen = document.getElementById("petScreen") 
+const healthBar = document.getElementById("healthBar") 
+const petButtons = document.getElementById("petButtons") 
+const eat =document.getElementById("eat") 
+const drink =document.getElementById("drink") 
+const petFn =document.getElementById("petBtn") 
 
-const petNameInput = document.getElementById("nameInput");
-const createPet = document.getElementById('choosePet')
-const dogBtn = document.getElementById('dogBtn')
-const catBtn = document.getElementById('catBtn')
-const birdBtn = document.getElementById('birdBtn')
-const welcomePage= document.getElementById("welcomePage")
-const petScreen = document.getElementById("petScreen")
+let pet = ""; 
+let petName = ""; 
 
+petScreen.style.display = "none"; 
 
+/* 
+------------------Pet name Function------------ 
+*/ 
 
+const inputName = () => { 
+    petName = document.getElementById("inputName").value 
+    while(petName.length === 0){ 
+        remind("Did you forget to name your pet?"); 
+        petName = register("Pet name"); 
+    } 
+}; 
 
-let pet = "";
-let petName = "";
+/* 
+-----------Animal class keyword code----------- 
+*/ 
 
-petScreen.style.display = "none";
-/*
-------------------Pet name Function------------
-*/
+class Animal { 
+    constructor(name, health,){ 
+        this.petName = name; 
+        this.healthBar = health; 
+    } 
+    get name(){ 
+        return this.petName.charAt(0).toUpperCase() + this.petName.slice(1); 
+    } 
+eat(healthBar){ 
+    healthBar.value += 15; 
+} 
+drink(healthBar){ 
+    healthBar.value += 15; 
+} 
+petFn(healthBar){ 
+    healthBar.value += 15; 
+} 
+} 
 
+class Dog extends Animal { 
+    constructor(name, healthBar) { 
+      super(name, healthBar); 
+    } 
+} 
 
-const inputName = () => {
-    petName = document.getElementById("inputName").value
-    while(petName.length === 0){
-        remind("Did you forget to name your pet?");
-        petName = register("Pet name");
-    }
-};
+class Cat extends Animal { 
+    constructor(name, healthBar) { 
+          super(name, healthBar); 
+        } 
+}; 
 
+class Bird extends Animal { 
+    constructor(name, healthBar) { 
+      super(name, healthBar); 
+    } 
+}; 
 
-/*
------------Animal class keyword code-----------
-*/
+/* 
+------------------Health decline Function------------ 
+*/ 
 
-class Animal {
-    constructor(name, health,){
-        this.petName = name;
-        this.healthBar = health;
-        
-       
-    }
+const healthDecline = () => { 
+    const dropOff = setInterval(loseHealth, 300); 
+    function loseHealth() { 
+        healthBar.value--; 
+    } 
+}; 
 
-    get name(){
-        return this.name.charAt(0).toUpperCase() + this.name.slice(1);
-    }
+/* 
+------------------Animal Choice Event listener code HERE------------ 
+*/ 
 
-talks() {
+dogBtn.addEventListener("click",() =>{ 
+    welcomePage.style.display = "none"; 
+    petScreen.style.display = "block"; 
+    inputName(); 
+    //SPRITE CODE HERE 
+    healthDecline(); 
+}); 
 
-    console.log(`Hi I'm ${this.name} and my health is ${this.health} `);
+catBtn.addEventListener("click",() =>{ 
+    welcomePage.style.display = "none"; 
+    petScreen.style.display = "block"; 
+    inputName(); 
+    //SPRITE CODE HERE 
+    healthDecline(); 
+}); 
 
-};
+birdBtn.addEventListener("click",() =>{ 
+    welcomePage.style.display = "none"; 
+    petScreen.style.display = "block"; 
+    inputName(); 
+    //SPRITE CODE HERE 
+    healthDecline(); 
+}); 
 
-feed(){
-    healthBar.value += 15;
-}
+/* ----------Animal Profile Code ---------------*/ 
 
-drink(){
-    healthBar.value += 15;
-}
+ 
 
-pet(){
-    healthBar.value += 15;
-}
-};
+// class Cat extends Animal{ 
 
-const Cat = new Animal ('', 100 )
+//     constructor(){ 
 
-
-const Dog = new Animal ('', 100)
-
-
-const Bird = new Animal ('', 100)
-
-/*
-------------------Health decline Function------------
-*/
-
-
-const healthDecline = () => {
-    const dropOff = setInterval(loseHealth, 500);
-    function loseHealth() {
-        healthBar.value--;
-    }
-};
-
-
-
-/*
-------------------Animal Choice Event listener code HERE------------
-*/
-
-dogBtn.addEventListener("click",() =>{
-    welcomePage.style.display = "none";
-    petScreen.style.display = "block";
-    console.log(petScreen)
-    inputName();
-    //SPRITE CODE HERE
-    healthDecline();
-});
-
-catBtn.addEventListener("click",() =>{
-    welcomePage.style.display = "none";
-    petScreen.style.display = "block";
-    inputName();
-    //SPRITE CODE HERE
-    healthDecline();
-});
-
-birdBtn.addEventListener("click",() =>{
-    welcomePage.style.display = "none";
-    petScreen.style.display = "block";
-    inputName();
-    //SPRITE CODE HERE
-    healthDecline();
-});
-
-
-
-
-/* ----------Animal Profile Code ---------------*/
-
-// class Cat extends Animal{
-//     constructor(){
-//     super(name)
-//     };
-//     letOut(){
-//         healthBar.value +=10;
-//     };
-// }
-
-// class Dog extends Animal{
-//     constructor(){
-//     super(name)
-//     };
-//     walk() {
-//         if (healthBar === 0){
-//             return "Game Over";
-//         }else{
-//         healthBar.value += 20;
-//     }
-// };
-
-// class Bird extends Animal{
-//     constructor(){
 //     super(name) 
-//     };
-//     fly(){
-//         if (healthBar === 0) {
-//             return "Game Over";
-//         }else{ healthBar.value =+ 20;
-//     }
-//     };
 
+   
 
-    
+//     eat(); 
 
-      /*---------Game over/Death code----------------*/
+//     drink(); 
 
-      death = () => {
-        document.getElementById("death-trigger").classList.add("fade-out");
-        setTimeout(function () {
-          document.getElementById("game-over").style.display = "none";
-          gameContainer.style.display = "none";
-        }, 2000);
-        return "gameOver";
-      };
+// }; 
 
+// }; 
 
+ 
 
+ 
 
-      /*---------Reset Game code----------------*/
-     const resetGame = () =>{
-          INSERTCODEHERE.addEventListener("click", () =>{
+        
 
-          })
-      };
+// class Dog extends Animal{ 
 
+//     constructor(){ 
+
+//     super(name) 
+
+//     }; 
+
+//     walk() { 
+
+//         if (healthBar === 0){ 
+
+//             return "Game Over"; 
+
+//         }else{ 
+
+//         healthBar.value += 20; 
+
+//     } 
+
+// }; 
+
+ 
+
+// class Bird extends Animal{ 
+
+//     constructor(){ 
+
+//     super(name)  
+
+//     }; 
+
+//     fly(){ 
+
+//         if (healthBar === 0) { 
+
+//             return "Game Over"; 
+
+//         }else{ healthBar.value =+ 20; 
+
+//     } 
+
+//     }; 
+
+ 
+
+ 
+
+const myPet = new Animal(petName, healthBar); 
+
+eat.addEventListener("click",() =>{ 
+   myPet.eat(healthBar); 
+}) 
+
+drink.addEventListener("click",() =>{ 
+   myPet.drink(healthBar); 
+}) 
+
+petFn.addEventListener("click",() =>{ 
+    myPet.petFn(healthBar);       
+}) 
+
+      /*---------Game over/Death code----------------*/ 
+
+      death = () => { 
+        document.getElementById("death-trigger").classList.add("fade-out"); 
+
+        setTimeout(function () { 
+          document.getElementById("game-over").style.display = "none"; 
+          gameContainer.style.display = "none"; 
+        }, 2000); 
+
+        return "gameOver"; 
+      }; 
+
+      /*---------Reset Game code----------------*/ 
+
+     const resetGame = () =>{ 
+
+          INSERTCODEHERE.addEventListener("click", () =>{ 
+          }) 
+      }; 
