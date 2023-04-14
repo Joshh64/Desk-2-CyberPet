@@ -28,8 +28,12 @@ body {
     flex-direction: row;
 }
 
-#speciesSelect {
+#speciesSelect {    
     font-size: 20px;
+}
+
+#petNameText {
+    margin: 20px;
 }
 
 #createPet {
