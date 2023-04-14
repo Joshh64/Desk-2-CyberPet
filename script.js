@@ -5,9 +5,9 @@
 
 const petNameInput = document.getElementById("nameInput");
 const createPet = document.getElementById('choosePet')
-const dogBtn = document.getElementById('dogButton')
-const catBtn = document.getElementById('catButton')
-const birdBtn = document.getElementById('birdButton')
+const dogBtn = document.getElementById('dogBtn')
+const catBtn = document.getElementById('catBtn')
+const birdBtn = document.getElementById('birdBtn')
 const welcomePage= document.getElementById("welcomePage")
 const petScreen = document.getElementById("petScreen")
 
@@ -15,7 +15,7 @@ const petScreen = document.getElementById("petScreen")
 
 
 let pet = "";
-let petName = '';
+let petName = "nameInput";
 
 petScreen.style.display = "none";
 /*
@@ -38,8 +38,8 @@ const inputName = () => {
 
 class Animal {
     constructor(name, health,){
-        this.name = name;
-        this.health = health;
+        this.petName = name;
+        this.healthBar = health;
         
        
     }
@@ -67,13 +67,13 @@ pet(){
 }
 };
 
-const Cat = new Animal ('Catty', 100 )
+const Cat = new Animal ('', 100 )
 
 
-const Dog = new Animal ('Dave', 100)
+const Dog = new Animal ('', 100)
 
 
-const Bird = new Animal ('Bobby', 100)
+const Bird = new Animal ('', 100)
 
 /*
 ------------------Health decline Function------------
@@ -95,7 +95,7 @@ const healthDecline = () => {
 
 dogBtn.addEventListener("click",() =>{
     welcomePage.style.display = "none";
-    petScreen.style.display ="block";
+    petScreen.style.display = "block";
     inputName();
     //SPRITE CODE HERE
     healthDecline();
@@ -103,7 +103,7 @@ dogBtn.addEventListener("click",() =>{
 
 catBtn.addEventListener("click",() =>{
     welcomePage.style.display = "none";
-    petScreen.style.display ="block";
+    petScreen.style.display = "block";
     inputName();
     //SPRITE CODE HERE
     healthDecline();
@@ -111,7 +111,7 @@ catBtn.addEventListener("click",() =>{
 
 birdBtn.addEventListener("click",() =>{
     welcomePage.style.display = "none";
-    petScreen.style.display ="block";
+    petScreen.style.display = "block";
     inputName();
     //SPRITE CODE HERE
     healthDecline();
