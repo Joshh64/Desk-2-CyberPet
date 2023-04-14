@@ -25,15 +25,44 @@
            </select>
        </div>
 
-       <div id="petNameInput" class = "pageBox">
+       <div id="petNameInput">
            <p>My pet will be called...<p>
            <input type="text"></button>
        </div>
 
-    <div id="createPet">
-        <button id="confirmBtn">Create my pet!</button>
+       <div id="createPet">
+           <button id="confirmBtn">Create my pet!</button>
+    </div>
+
+    <!-- Page 2 -->
+    
+    <div id="petPage" style="display: none">
+        <div>
+            <h1 id="page2Title">Desk 2's CyberPet</h1>
+        </div>
+
+        <div>
+            <img id="petAnimations" src="" alt="selected pet activity animation">
+        </div>
+
+        <div>
+            <button class="petActions">Eat</button>
+            <button class="petActions">Drink</button>
+            <button class="petActions">Play</button>
+            <button class="petActions">Sleep</button>
+        </div>
+    </div>
+
+    <!-- Part that displays when pet dies -->
+
+    <div style="display: none">
+        <p id="deathMessage">Oh no! Your pet has unfortunately passed away. It lived for (time), and the longest one of your pets has lived is (besttime)</p>
+        <div id="failText">
+            <button id="reset">Reset</button>
+        </div>
     </div>
     
+    </div>
 <script src="./script.js"></script>
 </body>
 </html>
