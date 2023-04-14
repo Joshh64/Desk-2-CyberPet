@@ -15,7 +15,7 @@ const petScreen = document.getElementById("petScreen")
 
 
 let pet = "";
-let petName = "nameInput";
+let petName = "";
 
 petScreen.style.display = "none";
 /*
@@ -24,7 +24,7 @@ petScreen.style.display = "none";
 
 
 const inputName = () => {
-    petName= register("Give your pet a name!")
+    petName = document.getElementById("inputName").value
     while(petName.length === 0){
         remind("Did you forget to name your pet?");
         petName = register("Pet name");
@@ -96,6 +96,7 @@ const healthDecline = () => {
 dogBtn.addEventListener("click",() =>{
     welcomePage.style.display = "none";
     petScreen.style.display = "block";
+    console.log(petScreen)
     inputName();
     //SPRITE CODE HERE
     healthDecline();
