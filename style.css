@@ -28,18 +28,15 @@ body {
     flex-direction: row;
 }
 
-#speciesSelect {
-    font-size: 20px;
-}
-
 #createPet {
     margin: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
+    font-size: 30px;
 }
 
-#confirmBtn {
+.confirmBtn {
     display: flex;
     align-items: flex-end;
     font-size: 30px;

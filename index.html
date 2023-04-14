@@ -17,22 +17,42 @@
        </div>
 
        <div id="openingPageInput" class = "pageBox">
-           <h1 id= "welcomeMessage">Hello! Please choose a species from the drop down menu and a name for your pet</h1>
-           <select id="speciesSelect">
-               <option value="Dog">Dog</option>
-               <option value="Cat">Cat</option>
-               <option value="Bird">Bird</option>
-           </select>
+           <h1 id= "welcomeMessage">Hello! Please choose a species and a name for your pet</h1>
        </div>
 
        <div id="petNameInput" class = "pageBox">
            <p>My pet will be called...<p>
            <input type="text"></button>
-       </div>
+       
 
     <div id="createPet">
-        <button id="confirmBtn">Create my pet!</button>
+        <button id="dogBtn" >Dog</button>
+        <button id="catBtn">Cat</button>
+        <button id=birdBtn>Bird</button>
     </div>
+</div>
+
+<!-- GAME INTEFACE CODE BELOW -->
+    <div id="petScreen">
+        <div class="petPage">
+            <div class="petSprite">
+                <img src="SPRITE SOURCE HERE" alt="SPRITE NAME HERE!">
+                <p> INSERT SPRITE GRAPHIC HERE!!</p>
+        </div>
+        <div id="petInfo">
+            <p id="petName"> PET NAME HERE</p>
+            <label for="healthBar"> Health:</label>
+            <meter id=healthBar min="0" max="100"></meter>
+        </div>
+    </div>
+    <div class=petButtons>
+        <button id="eat">Eat</button>
+        <button id="drink">Drink</button>
+        <button id="pet">Pet</button>
+    </div>
+    </div>
+
+   
     
 <script src="./script.js"></script>
 </body>
