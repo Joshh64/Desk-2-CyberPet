@@ -51,7 +51,7 @@ body {
     margin-top: bottom;
 }
 
-#petPage {
+#petScreen {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,14 +64,13 @@ body {
     padding: 20px;
 }
 
-#petAnimations {
+.petSprite {
     display: flex;
     justify-content: center;
-    margin: auto;
     padding: 30px;
 }
 
-.petActions {
+.petButtons {
     margin: 20px;
     font-size: 30px;
     margin-top: bottom;
