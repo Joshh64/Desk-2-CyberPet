@@ -88,3 +88,25 @@ body {
     justify-content: center;
     margin: auto;
 }
+
+.character {
+    width: 130px;
+    height: 180px;
+    /* background-color: red; */
+    overflow: hidden;
+
+
+}
+
+.character-spritesheet {
+    animation: moveSpriteSheet 3s steps(12) infinite;
+}
+
+@keyframes moveSpriteSheet {
+    from {
+        transform: translate3d(0, 0, 0);
+      }
+    to {transform: translate3d(-100%, 0, 0);
+
+    }
+}
