@@ -17,41 +17,42 @@
        </div>
 
        <div id="openingPageInput" class = "pageBox">
-           <h1 id= "welcomeMessage">Hello! Please choose a species from the drop down menu and a name for your pet</h1>
-           <select id="speciesSelect">
-               <option value="Dog">Dog</option>
-               <option value="Cat">Cat</option>
-               <option value="Bird">Bird</option>
-           </select>
+           <h1 id= "welcomeMessage">Hello! Please choose a species and a name for your pet</h1>
        </div>
 
        <div id="petNameInput">
            <p>My pet will be called...<p>
            <input type="text"></button>
-       </div>
 
-       <div id="createPet">
-           <button id="confirmBtn">Create my pet!</button>
+
+    <div id="createPet">
+        <button id="dogBtn" >Dog</button>
+        <button id="catBtn">Cat</button>
+        <button id=birdBtn>Bird</button>
     </div>
+</div>
 
-    <!-- Page 2 -->
-    
-    <div id="petPage" style="display: none">
-        <div>
-            <h1 id="page2Title">Desk 2's CyberPet</h1>
+<!-- GAME INTEFACE CODE BELOW -->
+    <div id="petScreen">
+        <div class="petPage">
+            <div class="petSprite">
+                <img src="SPRITE SOURCE HERE" alt="SPRITE NAME HERE!">
+                <p> INSERT SPRITE GRAPHIC HERE!!</p>
         </div>
-
-        <div>
-            <img id="petAnimations" src="" alt="selected pet activity animation">
-        </div>
-
-        <div>
-            <button class="petActions">Eat</button>
-            <button class="petActions">Drink</button>
-            <button class="petActions">Play</button>
-            <button class="petActions">Sleep</button>
+        <div id="petInfo">
+            <p id="petName"> PET NAME HERE</p>
+            <label for="healthBar"> Health:</label>
+            <meter id=healthBar min="0" max="100"></meter>
         </div>
     </div>
+    <div class=petButtons>
+        <button id="eat">Eat</button>
+        <button id="drink">Drink</button>
+        <button id="pet">Pet</button>
+    </div>
+    </div>
+
+   
 
     <!-- Part that displays when pet dies -->
 

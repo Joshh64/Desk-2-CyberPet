@@ -4,18 +4,23 @@
 */
 
 const petNameInput = document.getElementById("nameInput");
-const petChoice=document.getElementById('choosePet')
+const createPet = document.getElementById('choosePet')
+const dogBtn = document.getElementById('dogBtn')
+const catBtn = document.getElementById('catBtn')
+const birdBtn = document.getElementById('birdBtn')
+const welcomePage= document.getElementById("welcomePage")
+const petScreen = document.getElementById("petScreen")
 
 
 
 
+let pet = "";
+let petName = "nameInput";
 
+petScreen.style.display = "none";
 /*
 ------------------Pet name Function------------
 */
-
-let pet = "";
-let petName = '';
 
 
 const inputName = () => {
@@ -27,21 +32,19 @@ const inputName = () => {
 };
 
 
-
-
 /*
 -----------Animal class keyword code-----------
 */
 
 class Animal {
     constructor(name, health,){
-        this.name = name;
-        this.health = health;
+        this.petName = name;
+        this.healthBar = health;
         
        
     }
 
-    get name() {
+    get name(){
         return this.name.charAt(0).toUpperCase() + this.name.slice(1);
     }
 
@@ -62,29 +65,15 @@ drink(){
 pet(){
     healthBar.value += 15;
 }
+};
+
+const Cat = new Animal ('', 100 )
 
 
-}
+const Dog = new Animal ('', 100)
 
 
-
-
-
-const Cat = new Animal ('Catty', 100 )
-
-
-const Dog = new Animal ('Dave', 80)
-
-
-const Bird = new Animal ('Bobby', 70)
-
-
-
-Cat.talks();
-Dog.talks();
-Bird.talks();
-
-
+const Bird = new Animal ('', 100)
 
 /*
 ------------------Health decline Function------------
@@ -92,7 +81,7 @@ Bird.talks();
 
 
 const healthDecline = () => {
-    const dropOff = setInterval(loseHealth, 05000);
+    const dropOff = setInterval(loseHealth, 500);
     function loseHealth() {
         healthBar.value--;
     }
@@ -100,32 +89,92 @@ const healthDecline = () => {
 
 
 
+/*
+------------------Animal Choice Event listener code HERE------------
+*/
+
+dogBtn.addEventListener("click",() =>{
+    welcomePage.style.display = "none";
+    petScreen.style.display = "block";
+    inputName();
+    //SPRITE CODE HERE
+    healthDecline();
+});
+
+catBtn.addEventListener("click",() =>{
+    welcomePage.style.display = "none";
+    petScreen.style.display = "block";
+    inputName();
+    //SPRITE CODE HERE
+    healthDecline();
+});
+
+birdBtn.addEventListener("click",() =>{
+    welcomePage.style.display = "none";
+    petScreen.style.display = "block";
+    inputName();
+    //SPRITE CODE HERE
+    healthDecline();
+});
+
+
+
 
 /* ----------Animal Profile Code ---------------*/
 
-class Cat extends Animal{
-    constructor(){
-    super(name)
-    };
-    letOut(){
-        healthBar.value +=10;
-    };
-}
+// class Cat extends Animal{
+//     constructor(){
+//     super(name)
+//     };
+//     letOut(){
+//         healthBar.value +=10;
+//     };
+// }
 
-class Dog extends Animal{
-    constructor(){
-    super(name)
-    };
-    walk() {
-        healthBar.value += 20;
-    }
-}
+// class Dog extends Animal{
+//     constructor(){
+//     super(name)
+//     };
+//     walk() {
+//         if (healthBar === 0){
+//             return "Game Over";
+//         }else{
+//         healthBar.value += 20;
+//     }
+// };
 
-class Bird extends Animal{
-    constructor(){
-    super(name) 
-    };
-    fly(){
-        healthBar.value =+ 20;
-    }
-    };
+// class Bird extends Animal{
+//     constructor(){
+//     super(name) 
+//     };
+//     fly(){
+//         if (healthBar === 0) {
+//             return "Game Over";
+//         }else{ healthBar.value =+ 20;
+//     }
+//     };
+
+
+    
+
+      /*---------Game over/Death code----------------*/
+
+      death = () => {
+        document.getElementById("death-trigger").classList.add("fade-out");
+        setTimeout(function () {
+          document.getElementById("game-over").style.display = "none";
+          gameContainer.style.display = "none";
+        }, 2000);
+        return "gameOver";
+      };
+
+
+
+
+      /*---------Reset Game code----------------*/
+     const resetGame = () =>{
+          INSERTCODEHERE.addEventListener("click", () =>{
+
+          })
+      };
+
